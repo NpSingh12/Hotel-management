@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+  <div class="navbar" id="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="amenities.html">Services</a>
+    <a href="contact us.html">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+      &#9776;
+    </a>
+  </div>
+    <h1>Contact Us</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <footer>
+      <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p> 
+    </footer>
+    <script>
+      function toggleNavbar() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+</body>
+</html>

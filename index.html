@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hotel.css">
+    <style>
+      
+/* Home Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  background: url('images/hotel1.jpg') no-repeat center center/cover;
+  animation: slideBackground 15s linear infinite; /* Adjust the duration and timing function */
+  height: 642px;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89;
+
+}
+
+      @keyframes slideBackground {
+  0% {
+    background: url('images/hotel1.jpg') no-repeat center center/cover;
+  }
+  25% {
+    background: url('images/hotel2.jpg') no-repeat center center/cover;
+  }
+  50% {
+    background: url('images/hotel3.jpg') no-repeat center center/cover;
+  
+  }
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <div class="navbar" id="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="rooms.html">Rooms</a>
+  <a href="amenities.html">Services</a>
+  <a href="contact us.html">Contact</a>
+  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+    &#9776;
+  </a>
+</div>
+
+<header id="home"></header>
+  
+<section id="hotel1">
+  <div class="feature">
+    <h1>Hotel 1</h1>
+    <a href="hotel 1.html">
+    <img src="images/hotel1.jpg" alt="hotel 1"></a>
+    <p>Description and details about Hotel 1.</p>
+    <!-- Insert more content specific to Hotel 1 -->
+    <a href="hotel 1.html" class="btn">Book Now</a>
+  </div>
+  </section>
+
+  <section id="hotel2">
+    <div class="feature">
+    <h1>Hotel 2</h1>
+    <a href="hotel2.html">
+    <img src="images/hotel2.jpg" alt="hotel 2"></a>
+    <p>Description and details about Hotel 2.</p>
+    <!-- Insert more content specific to Hotel 2 -->
+    <a href="hotel2.html" class="btn">Book Now</a>
+  </div>
+  </section>
+
+  <section id="hotel3">
+    <div class="feature">
+    <h1>Hotel 3</h1>
+    <a href="hotel3.html">
+    <img src="images/hotel3.jpg" alt="hotel 3"></a>
+    <p>Description and details about Hotel 3.</p>
+    <!-- Insert more content specific to Hotel 3 -->
+    <a href="hotel3.html" class="btn">Book Now</a>
+  </div>
+  </section>
+  <footer>
+    <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
+
+ </div>
+  </footer>
+<script>
+  function toggleNavbar() {
+    var x = document.getElementById("navbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+
+
+  
+</script>
+</body>
+</html>
