@@ -34,13 +34,23 @@
     $no_guest = $_REQUEST['no_guest'];
     $special_request = $_REQUEST['special_request'];
 
-    $sql = "INSERT INTO reservation value ('$name', '$email', '$phone_no', '$check_in_date', '$check_out_date', '$room_type', '$no_guest', '$special_request')";
+    // Retrieve rate based on the selected room type
+    $rate = 0;
+    if ($room_type === "single") {
+        $rate = 100; // Set rate for single room
+    } elseif ($room_type === "double") {
+        $rate = 150; // Set rate for double room
+    } elseif ($room_type === "suite") {
+        $rate = 200; // Set rate for suite room
+    }
+
+    // Calculate total charges
+    $totalCharges = $rate * $no_guest;
+
+    // Insert reservation into database
+    $sql = "INSERT INTO reservation VALUES ('$name', '$email', '$phone_no', '$check_in_date', '$check_out_date', '$room_type', '$no_guest', '$special_request')";
     
     if (mysqli_query($conn, $sql)) {
-        // Retrieve the last inserted ID to get the booking details
-        $lastInsertedId = mysqli_insert_id($conn);
-        $billingDetails = getBillingDetails($lastInsertedId);
-
         // Display booking confirmation and billing information
         echo "<h3>Booking Confirmation</h3>";
         echo "<p>Name: $name</p>";
@@ -52,31 +62,20 @@
         echo "<p>Number of Guests: $no_guest</p>";
         echo "<p>Special Requests: $special_request</p>";
 
-        // Display billing information
+        // Display rate and total charges
         echo "<div class='bill-container'>";
         echo "<h4>Billing Information</h4>";
-        echo "<p>Total Charges: $" . $billingDetails['total_charges'] . "</p>";
+        echo "<p>Rate: $" . $rate . " per night</p>";
+        echo "<p>Total Charges: $" . $totalCharges . "</p>";
         echo "</div>";
 
         // Add a "Print" button
         echo "<button class='print-btn' onclick='printBill()'>Print Bill</button>";
-
-        // You may want to add a "Print" button here that triggers the print functionality
     } else {
         echo "<p>Error submitting the form.</p>";
     }
 
     mysqli_close($conn);
-
-    function getBillingDetails($bookingId)
-    {
-        // Add your logic to retrieve billing details based on the booking ID
-        // For demonstration purposes, I'm using a simple calculation
-        $rate = 100; // Replace with the actual rate based on room type
-        $totalCharges = $rate * $_REQUEST['no_guest'];
-
-        return ['total_charges' => $totalCharges];
-    }
     ?>
 
     </div>

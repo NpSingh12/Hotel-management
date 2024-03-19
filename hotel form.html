@@ -34,11 +34,11 @@
     <input type="date" id="check-out" name="check_out" required>
     
     <label for="room-type">Room Type:</label>
-    <select id="room-type" name="room_type" required>
+    <select id="room-type" name="room_type" required onchange="calculateRate()">
       <option value="" disabled selected>Select Room Type</option>
-      <option value="single">Single</option>
-      <option value="double">Double</option>
-      <option value="suite">Suite</option>
+      <option value="single" data-rate="900">Single</option>
+      <option value="double" data-rate="1500">Double</option>
+      <option value="suite" data-rate="2000">Suite</option>
     </select>
     
     <label for="no-guests">Number of Guests:</label>
@@ -46,28 +46,39 @@
     
     <label for="special-requests">Special Requests:</label>
     <textarea id="special-requests" name="special_request" rows="4"></textarea>
+
+    <label for="rate">Rate:</label>
+    <span id="rate"></span>
     
-
-  <input type="submit" value="Submit Reservation">
-
-    <!--<button type="submit">Submit</button>-->
-  </form><hr>
+    <input type="submit" value="Submit Reservation">
+  </form>
+  <hr>
   <footer>
-   
-<p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
-
-</div>
-</footer>
-<script>
-  function toggleNavbar() {
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
+    <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleNavbar() {
+      var x = document.getElementById("navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
     }
-  }
 
-</script>
+    function calculateRate() {
+      var roomType = document.getElementById("room-type").value;
+      var rateElement = document.getElementById("rate");
+      var rate = 0;
+      if (roomType === "single") {
+        rate = 900;
+      } else if (roomType === "double") {
+        rate = 1500;
+      } else if (roomType === "suite") {
+        rate = 2000;
+      }
+      rateElement.textContent = rate + " USD per night";
+    }
+  </script>
 </body>
 </html>
