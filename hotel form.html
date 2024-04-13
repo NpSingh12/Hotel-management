@@ -1,84 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Reservation Form</title>
-  <link rel="stylesheet" href="hotel.css">
-</head>
-<body>
-  <div class="navbar" id="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="rooms.html">Rooms</a>
-    <a href="amenities.html">Services</a>
-    <a href="contact us.html">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-      &#9776;
-    </a>
-  </div>
-  <h1>Hotel Reservation Form</h1>
-  <form action="insert.php" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" required>
-    
-    <label for="check-in">Check-in Date:</label>
-    <input type="date" id="check-in" name="check_in" required>
-    
-    <label for="check-out">Check-out Date:</label>
-    <input type="date" id="check-out" name="check_out" required>
-    
-    <label for="room-type">Room Type:</label>
-    <select id="room-type" name="room_type" required onchange="calculateRate()">
-      <option value="" disabled selected>Select Room Type</option>
-      <option value="single" data-rate="900">Single</option>
-      <option value="double" data-rate="1500">Double</option>
-      <option value="suite" data-rate="2000">Suite</option>
-    </select>
-    
-    <label for="no-guests">Number of Guests:</label>
-    <input type="number" id="no-guests" name="no_guest" min="1" required>
-    
-    <label for="special-requests">Special Requests:</label>
-    <textarea id="special-requests" name="special_request" rows="4"></textarea>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Reservation Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-    <label for="rate">Rate:</label>
-    <span id="rate"></span>
-    
-    <input type="submit" value="Submit Reservation">
-  </form>
-  <hr>
-  <footer>
-    <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
-  </footer>
-  <script>
-    function toggleNavbar() {
-      var x = document.getElementById("navbar");
-      if (x.className === "navbar") {
-        x.className += " responsive";
-      } else {
-        x.className = "navbar";
-      }
-    }
+    <link rel="stylesheet" href="hotel.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="amenities.html">Services</a>
+      <a href="contact us.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+      </a>
+    </div>
+    <h1>Hotel Reservation Form</h1>
+    <form action="insert.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
-    function calculateRate() {
-      var roomType = document.getElementById("room-type").value;
-      var rateElement = document.getElementById("rate");
-      var rate = 0;
-      if (roomType === "single") {
-        rate = 900;
-      } else if (roomType === "double") {
-        rate = 1500;
-      } else if (roomType === "suite") {
-        rate = 2000;
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="check-in">Check-in Date:</label>
+      <input type="date" id="check-in" name="check_in" required />
+
+      <label for="check-out">Check-out Date:</label>
+      <input type="date" id="check-out" name="check_out" required />
+
+      <label for="room-type">Room Type:</label>
+      <select
+        id="room-type"
+        name="room_type"
+        required
+        onchange="calculateRate()"
+      >
+        <option value="" disabled selected>Select Room Type</option>
+        <option value="single" data-rate="900">Single</option>
+        <option value="double" data-rate="1500">Double</option>
+        <option value="suite" data-rate="2000">Suite</option>
+      </select>
+
+      <label for="no-guests">Number of Guests:</label>
+      <input type="number" id="no-guests" name="no_guest" min="1" required />
+
+      <label for="special-requests">Special Requests:</label>
+      <textarea
+        id="special-requests"
+        name="special_request"
+        rows="4"
+      ></textarea>
+
+      <label for="rate">Rate:</label>
+      <span id="rate"></span>
+
+      <input type="submit" value="Submit Reservation" />
+    </form>
+    <hr />
+    <footer>
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>About Us</h3>
+            <p>
+              Discover our luxury hotel offering unparalleled comfort and
+              exceptional service. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Our Locations</h3>
+            <a href="#">New York</a>
+            <a href="#">Los Angeles</a>
+            <a href="#">Paris</a>
+            <a href="#">Tokyo</a>
+          </div>
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="#">Special Offers</a>
+            <a href="#">Gallery</a>
+            <a href="contact us.html">Contact</a>
+          </div>
+          <div class="box">
+            <h3>Connect With Us</h3>
+            <a href="#">Subscribe to Our Newsletter</a>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      function toggleNavbar() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
       }
-      rateElement.textContent = rate + " USD per night";
-    }
-  </script>
-</body>
+
+      function calculateRate() {
+        var roomType = document.getElementById("room-type").value;
+        var rateElement = document.getElementById("rate");
+        var rate = 0;
+        if (roomType === "single") {
+          rate = 900;
+        } else if (roomType === "double") {
+          rate = 1500;
+        } else if (roomType === "suite") {
+          rate = 2000;
+        }
+        rateElement.textContent = rate + " ₹ per night";
+      }
+    </script>
+  </body>
 </html>

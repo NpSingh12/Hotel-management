@@ -198,13 +198,73 @@ input[type="submit"]:hover {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 footer {
-  background-color: black;
-  color: white;
+  background-color:  #181a18;
+  color: var(--white);
   text-align: center;
-  padding: 35px;
-  margin-top: 100px;
+  padding: 50px 0;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  margin: 0 20px;
+  flex: 1;
+}
+
+.box h3 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.box p,
+.box a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.box a:hover {
+  color: var(--white);
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0 5px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
 
 /* Bill Container Styles */
 .bill-container {

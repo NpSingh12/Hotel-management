@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="hotel.css">
-</head>
-<body>
-  <div class="navbar" id="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="rooms.html">Rooms</a>
-    <a href="amenities.html">Services</a>
-    <a href="contact us.html">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-      &#9776;
-    </a>
-  </div>
-  <div class="feature">
-    <section id="rooms">
+    <link rel="stylesheet" href="hotel.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="amenities.html">Services</a>
+      <a href="contact us.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+      </a>
+    </div>
+    <div class="feature">
+      <section id="rooms">
         <h2>Our Rooms</h2>
         <div class="room">
-          <img src="images/h1room1.jpg" alt="Room 1">
+          <img src="images/h1room1.jpg" alt="Room 1" />
           <h3>Deluxe Suite</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <a href="contact us.html" class="btn">Inquire</a>
-        </div><hr>
+        </div>
+        <hr />
 
         <div class="room">
-          <img src="images/h2room1.jpg" alt="Room 2">
+          <img src="images/h2room1.jpg" alt="Room 2" />
           <h3>Premium Suite</h3>
-          <p>Phasellus pretium ex in sapien hendrerit, a cursus risus venenatis.</p>
+          <p>
+            Phasellus pretium ex in sapien hendrerit, a cursus risus venenatis.
+          </p>
           <a href="contact us.html" class="btn">Inquire</a>
-        </div><hr>
+        </div>
+        <hr />
 
         <div class="room">
-          <img src="images/h1-room.jpg" alt="Room 2">
+          <img src="images/h1-room.jpg" alt="Room 2" />
           <h3>Premium Suite</h3>
-          <p>Phasellus pretium ex in sapien hendrerit, a cursus risus venenatis.</p>
+          <p>
+            Phasellus pretium ex in sapien hendrerit, a cursus risus venenatis.
+          </p>
           <a href="contact us.html" class="btn">Inquire</a>
         </div>
       </section>
-  </div>
-      <footer>
-        <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
-    
-     </div>
-      </footer>
-      <script>
-        function toggleNavbar() {
-          var x = document.getElementById("navbar");
-          if (x.className === "navbar") {
-            x.className += " responsive";
-          } else {
-            x.className = "navbar";
-          }
+    </div>
+    <footer>
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>About Us</h3>
+            <p>
+              Discover our luxury hotel offering unparalleled comfort and
+              exceptional service. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Our Locations</h3>
+            <a href="#">New York</a>
+            <a href="#">Los Angeles</a>
+            <a href="#">Paris</a>
+            <a href="#">Tokyo</a>
+          </div>
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="#">Special Offers</a>
+            <a href="#">Gallery</a>
+            <a href="contact us.html">Contact</a>
+          </div>
+          <div class="box">
+            <h3>Connect With Us</h3>
+            <a href="#">Subscribe to Our Newsletter</a>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      function toggleNavbar() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
         }
-      </script>
-    
-</body>
+      }
+    </script>
+  </body>
 </html>

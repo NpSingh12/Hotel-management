@@ -37,11 +37,11 @@
     // Retrieve rate based on the selected room type
     $rate = 0;
     if ($room_type === "single") {
-        $rate = 100; // Set rate for single room
+        $rate = 900; // Set rate for single room
     } elseif ($room_type === "double") {
-        $rate = 150; // Set rate for double room
+        $rate = 1500; // Set rate for double room
     } elseif ($room_type === "suite") {
-        $rate = 200; // Set rate for suite room
+        $rate = 2200; // Set rate for suite room
     }
 
     // Calculate total charges
@@ -65,7 +65,7 @@
         // Display rate and total charges
         echo "<div class='bill-container'>";
         echo "<h4>Billing Information</h4>";
-        echo "<p>Rate: $" . $rate . " per night</p>";
+        echo "<p>Rate: ₹" . $rate . " per night</p>";
         echo "<p>Total Charges: $" . $totalCharges . "</p>";
         echo "</div>";
 

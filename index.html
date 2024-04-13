@@ -1,84 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="hotel.css">
-    <link rel="stylesheet" href="slider.css">
-    
-    <title>Hotel Mangement</title>
-</head>
-<body>
-  <div class="navbar" id="navbar">
-  <a href="index.html" class="active">Home</a>
-  <a href="rooms.html">Rooms</a>
-  <a href="amenities.html">Services</a>
-  <a href="contact us.html">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-    &#9776;
-  </a>
-</div>
-
-<header id="home">
   <head>
-    <!-- Other meta tags and links -->
-    <link rel="preload" href="images/hotel1.jpg" as="image">
-    <link rel="preload" href="images/hotel2.jpg" as="image">
-    <link rel="preload" href="images/hotel3.jpg" as="image">
-    <!-- Other stylesheets -->
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-</header>
-  
-<section id="hotel1">
-  <div class="feature">
-    <h1>Hotel 1</h1>
-    <a href="hotel 1.html">
-    <img src="images/hotel1.jpg" alt="hotel 1"></a>
-    <p>Description and details about Hotel 1.</p>
-    <!-- Insert more content specific to Hotel 1 -->
-    <a href="hotel 1.html" class="btn">Book Now</a>
-  </div>
-  </section>
+    <link rel="stylesheet" href="hotel.css" />
+    <link rel="stylesheet" href="slider.css" />
 
-  <section id="hotel2">
-    <div class="feature">
-    <h1>Hotel 2</h1>
-    <a href="hotel2.html">
-    <img src="images/hotel2.jpg" alt="hotel 2"></a>
-    <p>Description and details about Hotel 2.</p>
-    <!-- Insert more content specific to Hotel 2 -->
-    <a href="hotel2.html" class="btn">Book Now</a>
-  </div>
-  </section>
+    <title>Hotel Mangement</title>
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="amenities.html">Services</a>
+      <a href="contact us.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        &#9776;
+      </a>
+    </div>
 
-  <section id="hotel3">
-    <div class="feature">
-    <h1>Hotel 3</h1>
-    <a href="hotel3.html">
-    <img src="images/hotel3.jpg" alt="hotel 3"></a>
-    <p>Description and details about Hotel 3.</p>
-    <!-- Insert more content specific to Hotel 3 -->
-    <a href="hotel3.html" class="btn">Book Now</a>
-  </div>
-  </section>
-  <footer>
-    <p>&copy; <?php echo date("Y"); ?> Multiple Hotels. All rights reserved.</p>
+    <header id="home">
+      <head>
+        <!-- Other meta tags and links -->
+        <link rel="preload" href="images/hotel1.jpg" as="image" />
+        <link rel="preload" href="images/hotel2.jpg" as="image" />
+        <link rel="preload" href="images/hotel3.jpg" as="image" />
+        <!-- Other stylesheets -->
+      </head>
+    </header>
 
- </div>
-  </footer>
-<script>
-  function toggleNavbar() {
-    var x = document.getElementById("navbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
-    }
-  }
+    <section id="hotel1">
+      <div class="feature">
+        <h1>Hotel 1</h1>
+        <a href="hotel 1.html">
+          <img src="images/hotel1.jpg" alt="hotel 1"
+        /></a>
+        <p>Description and details about Hotel 1.</p>
+        <!-- Insert more content specific to Hotel 1 -->
+        <a href="hotel 1.html" class="btn">Book Now</a>
+      </div>
+    </section>
 
+    <section id="hotel2">
+      <div class="feature">
+        <h1>Hotel 2</h1>
+        <a href="hotel2.html"> <img src="images/hotel2.jpg" alt="hotel 2" /></a>
+        <p>Description and details about Hotel 2.</p>
+        <!-- Insert more content specific to Hotel 2 -->
+        <a href="hotel2.html" class="btn">Book Now</a>
+      </div>
+    </section>
 
-  
-</script>
-</body>
+    <section id="hotel3">
+      <div class="feature">
+        <h1>Hotel 3</h1>
+        <a href="hotel3.html"> <img src="images/hotel3.jpg" alt="hotel 3" /></a>
+        <p>Description and details about Hotel 3.</p>
+        <!-- Insert more content specific to Hotel 3 -->
+        <a href="hotel3.html" class="btn">Book Now</a>
+      </div>
+    </section>
+    <footer>
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>About Us</h3>
+            <p>
+              Discover our luxury hotel offering unparalleled comfort and
+              exceptional service. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </p>
+          </div>
+          <div class="box">
+            <h3>Our Locations</h3>
+            <a href="#">New York</a>
+            <a href="#">Los Angeles</a>
+            <a href="#">Paris</a>
+            <a href="#">Tokyo</a>
+          </div>
+          <div class="box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="amenities.html">Amenities</a>
+            <a href="#">Special Offers</a>
+            <a href="#">Gallery</a>
+            <a href="contact us.html">Contact</a>
+          </div>
+          <div class="box">
+            <h3>Connect With Us</h3>
+            <a href="#">Subscribe to Our Newsletter</a>
+            <div class="social-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      function toggleNavbar() {
+        var x = document.getElementById("navbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+    </script>
+  </body>
 </html>
