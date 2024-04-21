@@ -58,6 +58,7 @@
         echo "<p>Phone: $phone_no</p>";
         echo "<p>Check-in Date: $check_in_date</p>";
         echo "<p>Check-out Date: $check_out_date</p>";
+        echo "<p>Hotel Name: $hotel_name</p>"; // Display hotel name
         echo "<p>Room Type: $room_type</p>";
         echo "<p>Number of Guests: $no_guest</p>";
         echo "<p>Special Requests: $special_request</p>";
