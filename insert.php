@@ -33,6 +33,7 @@
     $room_type = $_REQUEST['room_type'];
     $no_guest = $_REQUEST['no_guest'];
     $special_request = $_REQUEST['special_request'];
+    $hotel_name = $_REQUEST['hotel_name']; 
 
     // Retrieve rate based on the selected room type
     $rate = 0;
